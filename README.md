@@ -12,7 +12,7 @@ This repo contains the PyTorch implementaion for the paper [Relational Graph Att
 First, download and unzip GloVe vectors(`glove.840B.300d.zip`) from https://nlp.stanford.edu/projects/glove/. Then change the value of parameter `--glove_dir` to the directory of the word vector file.
 
 ### For BERT Embedding
-Download the pytorch version pre-trained `bert-base-uncased` model and vocabury from the link provided by huggingface. Then change the value of parameter `--bert_model_dir` to the directory of the bert model.
+Download the pytorch version pre-trained `bert-base-uncased` model and vocabulary from the link provided by huggingface. Then change the value of parameter `--bert_model_dir` to the directory of the bert model.
 
 ## Preprocess
 The preprocess codes are in `data_preprocess_semeval.py` and `data_preprocess_twitter.py`. However we already provided the preprocessed datasets with dependency parcing results in `./data/`, so you can skip preprocess.
