@@ -198,9 +198,9 @@ def evaluate(args, eval_dataset, model):
                                  collate_fn=collate_fn)
 
     # Eval
-    # logger.info("***** Running evaluation *****")
-    # logger.info("  Num examples = %d", len(eval_dataset))
-    # logger.info("  Batch size = %d", args.eval_batch_size)
+    logger.info("***** Running evaluation *****")
+    logger.info("  Num examples = %d", len(eval_dataset))
+    logger.info("  Batch size = %d", args.eval_batch_size)
     eval_loss = 0.0
     nb_eval_steps = 0
     preds = None
@@ -232,14 +232,14 @@ def evaluate(args, eval_dataset, model):
     results.update(result)
 
     output_eval_file = os.path.join(args.output_dir, 'eval_results.txt')
-    # with open(output_eval_file, 'a+') as writer:
-    #     logger.info('***** Eval results *****')
-    #     logger.info("  eval loss: %s", str(eval_loss))
-    #     for key in sorted(result.keys()):
-    #         logger.info("  %s = %s", key, str(result[key]))
-    #         writer.write("  %s = %s\n" % (key, str(result[key])))
-    #         writer.write('\n')
-    #     writer.write('\n')
+    with open(output_eval_file, 'a+') as writer:
+        logger.info('***** Eval results *****')
+        logger.info("  eval loss: %s", str(eval_loss))
+        for key in sorted(result.keys()):
+            logger.info("  %s = %s", key, str(result[key]))
+            writer.write("  %s = %s\n" % (key, str(result[key])))
+            writer.write('\n')
+        writer.write('\n')
     return results, eval_loss
 
 
