@@ -1,5 +1,6 @@
 # Relational-Graph-Attention-Network-for-Aspect-based-Sentiment-Analysis
 This repo contains the PyTorch implementaion for the paper [Relational Graph Attention Network for Aspect-based Sentiment Analysis](https://arxiv.org/abs/2004.12362).
+For any questions about the implementation, plaese email shenwzh3@mail2.sysu.edu.cn.
 
 ## Requirements
 * Python 3.6.8
